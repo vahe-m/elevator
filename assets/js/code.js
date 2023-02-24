@@ -5,7 +5,7 @@ const select = document.querySelector('.call_lift > select');
 const controlPanel = document.querySelector('.control_panel');
 const floorNumber = document.querySelector('.floor_number > ul');
 const audio = document.createElement('audio');
-audio.src = 'audio/liftAudio.mp3';
+audio.src = 'assets/audio/liftAudio.mp3';
 let buildingFloor;
 const screenNumbers = [
 		{
