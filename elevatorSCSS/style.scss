@@ -1,0 +1,182 @@
+%lift-style {
+	position: absolute;
+	border: 3px solid #000;
+}
+
+@mixin lift-style2($w, $h) {
+	width: $w;
+	height: $h;
+}
+.building1 {
+	background-image: url("https://www.renderhub.com/virtual3d/apartment-building-5/apartment-building-5-01.jpg");
+	width: 900px;
+   height: 730px;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.container {
+	@include lift-style2(70px, 82px);
+	left: 586px;
+	bottom: 78px;
+	transform: translateY(2px) translateX(-20px);
+	position: absolute;
+	perspective: 500px;
+	display: block;
+	transition: 3s;
+	.lift {
+		width: inherit;
+		height: inherit;
+		transform-style: preserve-3d;		
+		transform: rotateY(44deg) rotateX(-6deg) rotateZ(-6deg);
+		transition: 3s;
+		.top-wall {
+			@extend %lift-style;
+			@include lift-style2(51px, 45px);
+			transform: rotateX(90deg) translateZ(25px) translateY(25px);
+			background-color: #8c6333;
+		}
+		.bottom-wall {
+			@extend %lift-style;
+			@include lift-style2(51px, 45px);
+			transform: rotateX(90deg) translateZ(-43px) translateY(25px);
+			background-color: #676462;
+		}
+		.right-wall {
+			@extend %lift-style;
+			@include lift-style2(45px, 64px);
+			transform: rotateY(90deg) translateZ(30px) translateX(-25px);
+			background-color: #B2ADA6;
+		}
+		.left-wall {
+			@extend %lift-style;
+			@include lift-style2(46px, 64px);
+			transform: rotateY(90deg) translateZ(-24px) translateX(-25px);
+			overflow: hidden;
+			.door {
+				@include lift-style2(44px, 61px);
+				border: 3px solid #7C7875;
+				background-color: #CDC6C0;
+				transform: translateX(1px);
+				transition-duration: 1.5s;
+				&.active {
+					transform: translateX(43px);
+				}
+			}
+		}
+		.front-wall {
+			@extend %lift-style;
+			@include lift-style2(51px, 64px);
+			transform: translateZ(49px);
+			background-color: #8c6333;
+		}
+		.back-wall {
+			@extend %lift-style; 
+			@include lift-style2(51px, 64px);
+			background-image: url("https://e7.pngegg.com/pngimages/456/907/png-clipart-elevator-bertikal-user-prosoc-condominium-elevator-love-bertikal-%D0%BB%D0%B8%D1%84%D1%82%D0%BE%D0%B2%D0%B0%D1%8F.png");
+			background-repeat: no-repeat;
+			background-size: 136px;
+			background-position: center;
+
+		}
+	}	
+}
+.control_panel {
+	@include lift-style2(138px, 36px);
+	position: absolute;
+	bottom: 228px;
+	right: 150px;  //480px;
+	border: 3px solid #838383;
+	border-radius:8px;
+	background: linear-gradient(to top, #F3F5F5, #B3B3B6, #F3F5F5, #B3B3B6);
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	transition: 1s;
+	.floor_number {
+		@include lift-style2(45px, 22px);
+		position: absolute;
+		top: 7px;
+		border-radius: 3px;
+		text-align: center;
+		background-color: #2A2A2A;
+		color: #FFCC72;
+		font-size: 20px;
+		overflow: hidden;
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			transform: translateY(-135px);
+			transition: 3200ms;
+		}
+	}
+	.numbers {
+		display: flex;
+		margin-top: 30px;
+		.number1 {
+			margin-right: 5px;
+			font-size: 23px;
+			font-weight: 600;
+			ul {
+				list-style: none;
+				padding: 0;
+				li {
+					@include lift-style2(40px, 40px);
+					margin-top: 10px;
+					background: linear-gradient(to top, #838383, #E1E1E1, #838383);
+					border: 5px solid #838383;
+					border-radius: 50%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					cursor: pointer;
+					transition: .5s;
+				}
+			}
+		}
+		.number2 {
+			margin-left: 5px;
+			font-size: 23px;
+			font-weight: 600;
+			ul {
+				list-style:none;
+				padding: 0;
+				li {
+					@include lift-style2(40px, 40px);
+					margin-top: 10px;
+					background: linear-gradient(to top, #838383, #E1E1E1, #838383);
+					border: 5px solid #838383;
+					border-radius:50%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					cursor: pointer;
+					transition: .5s;
+				}
+			}
+		}
+	}
+}
+.call_lift {
+	@include lift-style2(140px, 80px);
+	position: absolute;
+	right: 150px;
+	bottom: 150px;
+	background: linear-gradient(to top, #f3f5f5, #b3b3b6, #f3f5f5);
+	border: 2px solid #838383;
+	border-radius: 6px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	.call_btn {
+		@include lift-style2(40px, 40px);
+		background: linear-gradient(to top, #838383, #E1E1E1, #838383);
+		border: 5px solid #838383;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: .5s;
+		p {
+			margin: 0 12px 0 12px;
+		}
+	}
+}

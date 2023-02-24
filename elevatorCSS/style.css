@@ -1,0 +1,237 @@
+.container .lift .back-wall, .container .lift .front-wall, .container .lift .left-wall, .container .lift .right-wall, .container .lift .bottom-wall, .container .lift .top-wall {
+  position: absolute;
+  border: 3px solid #000;
+}
+
+.building1 {
+  background-image: url("https://www.renderhub.com/virtual3d/apartment-building-5/apartment-building-5-01.jpg");
+  width: 900px;
+  height: 730px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 70px;
+  height: 82px;
+  left: 586px;
+  bottom: 78px;
+  -webkit-transform: translateY(2px) translateX(-20px);
+          transform: translateY(2px) translateX(-20px);
+  position: absolute;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  display: block;
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+.container .lift {
+  width: inherit;
+  height: inherit;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(44deg) rotateX(-6deg) rotateZ(-6deg);
+          transform: rotateY(44deg) rotateX(-6deg) rotateZ(-6deg);
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+.container .lift .top-wall {
+  width: 51px;
+  height: 45px;
+  -webkit-transform: rotateX(90deg) translateZ(25px) translateY(25px);
+          transform: rotateX(90deg) translateZ(25px) translateY(25px);
+  background-color: #8c6333;
+}
+.container .lift .bottom-wall {
+  width: 51px;
+  height: 45px;
+  -webkit-transform: rotateX(90deg) translateZ(-43px) translateY(25px);
+          transform: rotateX(90deg) translateZ(-43px) translateY(25px);
+  background-color: #676462;
+}
+.container .lift .right-wall {
+  width: 45px;
+  height: 64px;
+  -webkit-transform: rotateY(90deg) translateZ(30px) translateX(-25px);
+          transform: rotateY(90deg) translateZ(30px) translateX(-25px);
+  background-color: #B2ADA6;
+}
+.container .lift .left-wall {
+  width: 46px;
+  height: 64px;
+  -webkit-transform: rotateY(90deg) translateZ(-24px) translateX(-25px);
+          transform: rotateY(90deg) translateZ(-24px) translateX(-25px);
+  overflow: hidden;
+}
+.container .lift .left-wall .door {
+  width: 44px;
+  height: 61px;
+  border: 3px solid #7C7875;
+  background-color: #CDC6C0;
+  -webkit-transform: translateX(1px);
+          transform: translateX(1px);
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+}
+.container .lift .left-wall .door.active {
+  -webkit-transform: translateX(43px);
+          transform: translateX(43px);
+}
+.container .lift .front-wall {
+  width: 51px;
+  height: 64px;
+  -webkit-transform: translateZ(49px);
+          transform: translateZ(49px);
+  background-color: #8c6333;
+}
+.container .lift .back-wall {
+  width: 51px;
+  height: 64px;
+  background-image: url("https://e7.pngegg.com/pngimages/456/907/png-clipart-elevator-bertikal-user-prosoc-condominium-elevator-love-bertikal-%D0%BB%D0%B8%D1%84%D1%82%D0%BE%D0%B2%D0%B0%D1%8F.png");
+  background-repeat: no-repeat;
+  background-size: 136px;
+  background-position: center;
+}
+
+.control_panel {
+  width: 138px;
+  height: 36px;
+  position: absolute;
+  bottom: 228px;
+  right: 150px;
+  border: 3px solid #838383;
+  border-radius: 8px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#F3F5F5), color-stop(#B3B3B6), color-stop(#F3F5F5), to(#B3B3B6));
+  background: linear-gradient(to top, #F3F5F5, #B3B3B6, #F3F5F5, #B3B3B6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.control_panel .floor_number {
+  width: 45px;
+  height: 22px;
+  position: absolute;
+  top: 7px;
+  border-radius: 3px;
+  text-align: center;
+  background-color: #2A2A2A;
+  color: #FFCC72;
+  font-size: 20px;
+  overflow: hidden;
+}
+.control_panel .floor_number ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  -webkit-transform: translateY(-135px);
+          transform: translateY(-135px);
+  -webkit-transition: 3200ms;
+  transition: 3200ms;
+}
+.control_panel .numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+}
+.control_panel .numbers .number1 {
+  margin-right: 5px;
+  font-size: 23px;
+  font-weight: 600;
+}
+.control_panel .numbers .number1 ul {
+  list-style: none;
+  padding: 0;
+}
+.control_panel .numbers .number1 ul li {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#838383), color-stop(#E1E1E1), to(#838383));
+  background: linear-gradient(to top, #838383, #E1E1E1, #838383);
+  border: 5px solid #838383;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.control_panel .numbers .number2 {
+  margin-left: 5px;
+  font-size: 23px;
+  font-weight: 600;
+}
+.control_panel .numbers .number2 ul {
+  list-style: none;
+  padding: 0;
+}
+.control_panel .numbers .number2 ul li {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#838383), color-stop(#E1E1E1), to(#838383));
+  background: linear-gradient(to top, #838383, #E1E1E1, #838383);
+  border: 5px solid #838383;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.call_lift {
+  width: 140px;
+  height: 80px;
+  position: absolute;
+  right: 150px;
+  bottom: 150px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f3f5f5), color-stop(#b3b3b6), to(#f3f5f5));
+  background: linear-gradient(to top, #f3f5f5, #b3b3b6, #f3f5f5);
+  border: 2px solid #838383;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.call_lift .call_btn {
+  width: 40px;
+  height: 40px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#838383), color-stop(#E1E1E1), to(#838383));
+  background: linear-gradient(to top, #838383, #E1E1E1, #838383);
+  border: 5px solid #838383;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.call_lift .call_btn p {
+  margin: 0 12px 0 12px;
+}
